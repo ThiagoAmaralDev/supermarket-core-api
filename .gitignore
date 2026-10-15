@@ -1,0 +1,15 @@
+# Pastas de compilação
+bin/
+target/
+
+# Configurações de IDEs (IntelliJ / Eclipse / VS Code)
+.idea/
+*.iml
+.settings/
+.classpath
+.project
+.vscode/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db

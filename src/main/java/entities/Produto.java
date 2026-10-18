@@ -1,9 +1,9 @@
 package entities;
 
 public class Produto {
-    public String nome;
-    public double precoUnitario;
-    public int quantidadeEstoque;
+    private String nome;
+    private double precoUnitario;
+    private int quantidadeEstoque;
 
     public Produto(String nome, double precoUnitario, int quantidadeEstoque) {
         this.nome = nome;
@@ -14,6 +14,31 @@ public class Produto {
     public Produto(String nome, double precoUnitario) {
         this.nome = nome;
         this.precoUnitario = precoUnitario;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPrecoUnitario() {
+        return precoUnitario;
+    }
+
+    public void setPrecoUnitario(double precoUnitario) {
+        if(precoUnitario > 0) {
+            this.precoUnitario = precoUnitario;
+        } else {
+            System.out.println("Preço inválido! O valor deve ser maior que zero.");
+        }
+
+    }
+
+    public int getQuantidadeEstoque() {
+        return quantidadeEstoque;
     }
 
     public double valorTotalEmEstoque() {

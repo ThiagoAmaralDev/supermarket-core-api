@@ -16,9 +16,15 @@ public class Programa {
         double precoUnitario = sc.nextDouble();
 
 
+
         Produto produto1 = new Produto(nome, precoUnitario);
 
         System.out.println("Dados do produto: " + produto1);
+
+        //Simulando reajuste de preço.
+
+        produto1.setPrecoUnitario(-1);
+
 
         System.out.println("Quanto será adicionado no estoque:" );
         int qtdEntrada = sc.nextInt();
@@ -28,7 +34,17 @@ public class Programa {
         int qtdSaida = sc.nextInt();
         produto1.removerEstoque(qtdSaida);
 
-        System.out.println("Dados atualizados: " +produto1.toString());
+        // Mensagem personalizada
+
+        System.out.println("Nome: "+ produto1.getNome());
+        System.out.println("Quantidade no estoque: "+ produto1.getQuantidadeEstoque());
+
+
+
+        System.out.println("Dados completamente atualizados: " +produto1.toString());
+
+
+
         sc.close();
 
 

@@ -23,7 +23,7 @@ public class Programa {
 
         //Simulando reajuste de preço.
 
-        produto1.setPrecoUnitario(-1);
+        produto1.setPrecoUnitario(10);
 
 
         System.out.println("Quanto será adicionado no estoque:" );

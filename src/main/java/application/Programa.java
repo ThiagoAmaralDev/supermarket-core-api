@@ -6,26 +6,32 @@ import java.util.Scanner;
 public class Programa {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //Produtos
 
-        Produto produto1 = new Produto();
+        System.out.println("DADOS DO PRODUTO: ");
+        System.out.println("------------------------");
+        System.out.print("Nome do produto: ");
+        String nome = sc.nextLine();
+
+        System.out.print("Preço do produto: ");
+        double precoUnitario = sc.nextDouble();
 
 
-        produto1.nome = sc.nextLine();
-        produto1.precoUnitario = sc.nextDouble();
-        produto1.quantidadeEstoque = sc.nextInt();
+        Produto produto1 = new Produto(nome, precoUnitario);
 
-        System.out.println(produto1);
+        System.out.println("Dados do produto: " + produto1);
 
-        produto1.adicionarEstoque(5);
+        System.out.println("Quanto será adicionado no estoque:" );
+        int qtdEntrada = sc.nextInt();
+        produto1.adicionarEstoque(qtdEntrada);
 
-        System.out.println("Novo estoque (adicionado): "+produto1.quantidadeEstoque);
+        System.out.println("Quanto será removido do estoque: ");
+        int qtdSaida = sc.nextInt();
+        produto1.removerEstoque(qtdSaida);
 
-        produto1.removerEstoque(2);
-
-        System.out.println("Novo estoque (removido): " +produto1.quantidadeEstoque);
-
+        System.out.println("Dados atualizados: " +produto1.toString());
         sc.close();
+
+
 
 
     }

@@ -5,6 +5,17 @@ public class Produto {
     public double precoUnitario;
     public int quantidadeEstoque;
 
+    public Produto(String nome, double precoUnitario, int quantidadeEstoque) {
+        this.nome = nome;
+        this.precoUnitario = precoUnitario;
+        this.quantidadeEstoque = quantidadeEstoque;
+    }
+
+    public Produto(String nome, double precoUnitario) {
+        this.nome = nome;
+        this.precoUnitario = precoUnitario;
+    }
+
     public double valorTotalEmEstoque() {
         return precoUnitario * quantidadeEstoque;
     }
